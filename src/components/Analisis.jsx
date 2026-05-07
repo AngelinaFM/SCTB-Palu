@@ -52,7 +52,7 @@ function Analisis() {
 
       <Bar data={chartData} />
 
-      <div className="mt-6 space-y-3">
+      <div className="mt-6 space-y-3 max-h-[350px] overflow-y-auto pr-2">
         {data.map((item, index) => (
           <div key={index} className="bg-gray-100 p-3 rounded-xl">
             <p className="font-semibold">{item.KataKunci}</p>

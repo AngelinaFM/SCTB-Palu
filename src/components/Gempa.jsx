@@ -1,7 +1,9 @@
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
+import alarmSound from "../assets/audio/alarm.mp3";
 
 function Gempa() {
+  const alarm = new Audio(alarmSound);
   const [gempa, setGempa] = useState(null);
 
   const [lastUpdate, setLastUpdate] = useState("");
@@ -15,11 +17,43 @@ function Gempa() {
         .then((data) => {
           console.log("DATA GEMPA:", data);
 
-          // cek apakah data baru
+          // code Tessting Gempa
+          //   if (true) {
+          //     const magnitude = parseFloat(data.Magnitude);
+          //     alarm.play();
+          //     if (magnitude < 3) {
+          //       toast.success(
+          //         `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
+          //       );
+          //     } else if (magnitude >= 3 && magnitude <= 5) {
+          //       toast.warning(
+          //         `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
+          //       );
+          //     } else {
+          //       toast.error(
+          //         `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
+          //       );
+          //     }
+          //   }
+          // code fix
           if (gempa && gempa.DateTime !== data.DateTime) {
-            toast.error(`Gempa Baru M ${data.Magnitude} - ${data.Wilayah}`, {
-              position: "top-right",
-            });
+            const magnitude = parseFloat(data.Magnitude);
+
+            alarm.play();
+
+            if (magnitude < 3) {
+              toast.success(
+                `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
+              );
+            } else if (magnitude >= 3 && magnitude <= 5) {
+              toast.warning(
+                `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
+              );
+            } else {
+              toast.error(
+                `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
+              );
+            }
           }
 
           setGempa(data);

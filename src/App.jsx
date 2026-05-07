@@ -19,8 +19,7 @@ function App() {
                 Dashboard Monitoring Gempa Bumi Indonesia
               </p>
 
-              <h1 className="text-5xl font-bold text-gray-800 leading-tight">
-                Smart City <br />
+              <h1 className="text-6xl font-bold text-gray-800 leading-tight">
                 SCTB Palu
               </h1>
 
