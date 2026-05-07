@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Gempa from "./components/Gempa";
 import Analisis from "./components/Analisis";
 import MapGempa from "./components/MapGempa";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -102,6 +103,10 @@ function App() {
           </div>
         </div>
       </section>
+      <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      theme="light"/>
     </div>
   );
 }

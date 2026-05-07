@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 
 function Gempa() {
@@ -16,9 +17,9 @@ function Gempa() {
 
           // cek apakah data baru
           if (gempa && gempa.DateTime !== data.DateTime) {
-            alert(
-              `🚨 Gempa Baru!\n\nMagnitude ${data.Magnitude}\n${data.Wilayah}`,
-            );
+            toast.error(`Gempa Baru M ${data.Magnitude} - ${data.Wilayah}`, {
+              position: "top-right",
+            });
           }
 
           setGempa(data);
