@@ -11,50 +11,50 @@ function Gempa() {
   useEffect(() => {
     const fetchGempa = () => {
       fetch(
-        "https://sctb-backend-brynjuan983-amxrusia.leapcell.dev/api/v1/gempa/latest",
+        "https://konversi-84286ef3eab7.herokuapp.com/api/v1/statistics/keywords",
       )
         .then((res) => res.json())
         .then((data) => {
           console.log("DATA GEMPA:", data);
 
           // code Tessting Gempa
-          //   if (true) {
-          //     const magnitude = parseFloat(data.Magnitude);
-          //     alarm.play();
-          //     if (magnitude < 3) {
-          //       toast.success(
-          //         `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
-          //       );
-          //     } else if (magnitude >= 3 && magnitude <= 5) {
-          //       toast.warning(
-          //         `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
-          //       );
-          //     } else {
-          //       toast.error(
-          //         `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
-          //       );
-          //     }
-          //   }
-          // code fix
-          if (gempa && gempa.DateTime !== data.DateTime) {
-            const magnitude = parseFloat(data.Magnitude);
-
-            alarm.play();
-
-            if (magnitude < 3) {
-              toast.success(
-                `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
-              );
-            } else if (magnitude >= 3 && magnitude <= 5) {
-              toast.warning(
-                `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
-              );
-            } else {
-              toast.error(
-                `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
-              );
+            if (true) {
+              const magnitude = parseFloat(data.Magnitude);
+              alarm.play();
+              if (magnitude < 3) {
+                toast.success(
+                  `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
+                );
+              } else if (magnitude >= 3 && magnitude <= 5) {
+                toast.warning(
+                  `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
+                );
+              } else {
+                toast.error(
+                  `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
+                );
+              }
             }
-          }
+          // code fix
+          // if (gempa && gempa.DateTime !== data.DateTime) {
+          //   const magnitude = parseFloat(data.Magnitude);
+
+          //   alarm.play();
+
+          //   if (magnitude < 3) {
+          //     toast.success(
+          //       `Gempa Kecil M ${data.Magnitude} - ${data.Wilayah}`,
+          //     );
+          //   } else if (magnitude >= 3 && magnitude <= 5) {
+          //     toast.warning(
+          //       `Gempa Sedang M ${data.Magnitude} - ${data.Wilayah}`,
+          //     );
+          //   } else {
+          //     toast.error(
+          //       `🚨 Gempa Besar M ${data.Magnitude} - ${data.Wilayah}`,
+          //     );
+          //   }
+          // }
 
           setGempa(data);
 

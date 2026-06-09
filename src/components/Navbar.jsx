@@ -10,15 +10,14 @@ function Navbar() {
           <div className="flex items-center gap-4">
 
             <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
-              BMKG
+              SCTB
             </div>
 
             <div>
               <h1 className="font-bold text-gray-800 leading-tight">
-                BADAN METEOROLOGI,
+                SMART CITY TECHNOLOGY
                 <br />
-                KLIMATOLOGI, DAN GEOFISIKA
-              </h1>
+                FOR DISASTER & SOCIAL MONITORING</h1>
             </div>
 
           </div>

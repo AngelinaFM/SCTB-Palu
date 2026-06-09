@@ -26,7 +26,7 @@ function Analisis() {
 
   useEffect(() => {
     fetch(
-      "https://sctb-backend-brynjuan983-amxrusia.leapcell.dev/api/v1/statistics/keywords",
+      "https://konversi-84286ef3eab7.herokuapp.com/api/v1/statistics/keywords",
     )
       .then((res) => res.json())
       .then((data) => {

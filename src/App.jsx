@@ -3,6 +3,7 @@ import Gempa from "./components/Gempa";
 import Analisis from "./components/Analisis";
 import MapGempa from "./components/MapGempa";
 import { ToastContainer } from "react-toastify";
+import SimulationSection from "./components/SimulationSection";
 
 function App() {
   return (
@@ -102,6 +103,10 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* SIMULATION SECTION */}
+      <SimulationSection />
+
       <ToastContainer
       position="top-right"
       autoClose={5000}
