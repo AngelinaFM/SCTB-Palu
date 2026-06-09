@@ -162,8 +162,9 @@ http://localhost:5173
 ---
 
 ## 👨‍💻 Tim Pengembang
-| Backend Developer  | Briant Juan Hamonangan_F55123030 |
+| Backend Developer  | Briant Juan Hamonangan_F55123030    |
 | Frontend Developer | Angelina Febriani Madesen_F55123084 |
+
 ---
 
 ## 📜 Lisensi
